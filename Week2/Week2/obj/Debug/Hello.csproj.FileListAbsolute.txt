@@ -1,0 +1,10 @@
+H:\Practicals\Week2\Week2\bin\Debug\Week2.exe.config
+H:\Practicals\Week2\Week2\bin\Debug\Week2.exe
+H:\Practicals\Week2\Week2\bin\Debug\Week2.pdb
+H:\Practicals\Week2\Week2\obj\Debug\Hello.csprojAssemblyReference.cache
+H:\Practicals\Week2\Week2\obj\Debug\Hello.csproj.CoreCompileInputs.cache
+H:\Practicals\Week2\Week2\obj\Debug\Week2.exe
+H:\Practicals\Week2\Week2\obj\Debug\Week2.pdb
+H:\Practicals\Week2\Week2\bin\Debug\System.ValueTuple.dll
+H:\Practicals\Week2\Week2\bin\Debug\System.ValueTuple.xml
+H:\Practicals\Week2\Week2\obj\Debug\Hello.csproj.CopyComplete
