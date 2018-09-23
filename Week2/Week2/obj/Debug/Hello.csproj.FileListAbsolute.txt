@@ -8,3 +8,11 @@ H:\Practicals\Week2\Week2\obj\Debug\Week2.pdb
 H:\Practicals\Week2\Week2\bin\Debug\System.ValueTuple.dll
 H:\Practicals\Week2\Week2\bin\Debug\System.ValueTuple.xml
 H:\Practicals\Week2\Week2\obj\Debug\Hello.csproj.CopyComplete
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Week2\Week2\bin\Debug\Week2.exe.config
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Week2\Week2\bin\Debug\Week2.exe
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Week2\Week2\bin\Debug\Week2.pdb
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Week2\Week2\bin\Debug\System.ValueTuple.dll
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Week2\Week2\bin\Debug\System.ValueTuple.xml
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Week2\Week2\obj\Debug\Hello.csprojResolveAssemblyReference.cache
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Week2\Week2\obj\Debug\Week2.exe
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Week2\Week2\obj\Debug\Week2.pdb

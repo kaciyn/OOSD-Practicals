@@ -31,7 +31,7 @@ namespace Week2
             Console.WriteLine("Press return to exit");
             Console.ReadLine();
         }
-        //TODO something wonky is happening with this lil guy it's not getting at least 51 as a prime maybe more but that is a problemo
+
         static bool CheckIfIsPrime(int number)
         {
             int i;
@@ -44,14 +44,7 @@ namespace Week2
                     return false;
                 }
             }
-            if (i == number)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return true;
         }
     }
 }

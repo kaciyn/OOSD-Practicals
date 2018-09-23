@@ -19,6 +19,7 @@ namespace Week2
             Console.WriteLine("Press return to exit");
             Console.ReadLine();
         }
+
         static bool CheckIfIsPrime(int number)
         {
             int i;
@@ -31,14 +32,7 @@ namespace Week2
                     return false;
                 }
             }
-            if (i == number)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return true;
         }
     }
 }
