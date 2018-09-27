@@ -1,0 +1,15 @@
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\bin\Debug\Validation.exe.config
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\bin\Debug\Validation.exe
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\bin\Debug\Validation.pdb
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\Validation.csprojAssemblyReference.cache
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\MainWindow.g.cs
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\App.g.cs
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\Validation_MarkupCompile.cache
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\Validation_MarkupCompile.lref
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\MainWindow.baml
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\Validation.g.resources
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\Validation.Properties.Resources.resources
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\Validation.csproj.GenerateResource.cache
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\Validation.csproj.CoreCompileInputs.cache
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\Validation.exe
+H:\teaching\OOSD\2 - Intro and GUIs\practical2\practical\Validation\obj\Debug\Validation.pdb

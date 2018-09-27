@@ -1,0 +1,13 @@
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\obj\Debug\MainWindow.baml
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\obj\Debug\MainWindow.g.cs
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\obj\Debug\App.g.cs
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\obj\Debug\Timer_MarkupCompile.cache
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\obj\Debug\Timer.g.resources
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\obj\Debug\TimerEvents.csproj.GenerateResource.Cache
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\obj\Debug\Timer.exe
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\obj\Debug\Timer.pdb
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\bin\Debug\Timer.exe.config
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\bin\Debug\Timer.exe
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\bin\Debug\Timer.pdb
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\obj\Debug\TimerExample.Properties.Resources.resources
+\\napier-mail.napier.ac.uk\staff\school of computing\user data\cs88\visual studio 2013\Projects\Bank\Timer\obj\Debug\TimerEvents.csprojResolveAssemblyReference.cache

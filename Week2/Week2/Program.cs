@@ -14,7 +14,7 @@ namespace Week2
             //HouseArea.GetHouseArea();
             PrimeNumbers.PrimeNumberPrinter();
             //AddString.AddNumbersInString();
-//            PrimeNumberChecker.ConfirmPrimeNumber();
+            //PrimeNumberChecker.ConfirmPrimeNumber();
         }
     }
 }
