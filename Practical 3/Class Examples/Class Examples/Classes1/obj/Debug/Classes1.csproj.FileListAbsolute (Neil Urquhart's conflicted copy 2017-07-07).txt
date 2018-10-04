@@ -1,0 +1,21 @@
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit7_classes\Classes1\obj\Debug\Classes1.exe
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit7_classes\Classes1\obj\Debug\Classes1.pdb
+C:\AL stuff\teaching\2_5 classes\Classes1\obj\Debug\Classes1.exe
+C:\AL stuff\teaching\2_5 classes\Classes1\obj\Debug\Classes1.pdb
+D:\SD2\1 - Intro to Objects\2_5 classes\Classes1\obj\Debug\Classes1.exe
+D:\SD2\1 - Intro to Objects\2_5 classes\Classes1\obj\Debug\Classes1.pdb
+D:\SD2\1 - Intro to Objects\2_5 classes\Classes1\bin\Debug\Classes1.exe
+D:\SD2\1 - Intro to Objects\2_5 classes\Classes1\bin\Debug\Classes1.pdb
+D:\SD2\1 - Intro to Objects\2_5 classes\Classes1\obj\Debug\ResolveAssemblyReference.cache
+C:\SD2\SD2\2 - Simple Objects\Class Examples\Classes1\obj\Debug\Classes1.exe
+C:\SD2\SD2\2 - Simple Objects\Class Examples\Classes1\obj\Debug\Classes1.pdb
+C:\SD2\SD2\2 - Simple Objects\Class Examples\Classes1\bin\Debug\Classes1.exe
+C:\SD2\SD2\2 - Simple Objects\Class Examples\Classes1\bin\Debug\Classes1.pdb
+C:\SD2\SD2\2 - Simple Objects\Class Examples\Classes1\obj\Debug\Classes1.csprojResolveAssemblyReference.cache
+H:\teaching\SD2\2 - Simple Objects\Class Examples\Classes1\obj\Debug\Classes1.exe
+H:\teaching\SD2\2 - Simple Objects\Class Examples\Classes1\obj\Debug\Classes1.pdb
+H:\teaching\SD2\3 - Simple Objects\Class Examples\Classes1\obj\Debug\Classes1.exe
+H:\teaching\SD2\3 - Simple Objects\Class Examples\Classes1\obj\Debug\Classes1.pdb
+H:\teaching\SD2\3 - Simple Objects\Class Examples\Classes1\bin\Debug\Classes1.exe
+H:\teaching\SD2\3 - Simple Objects\Class Examples\Classes1\bin\Debug\Classes1.pdb
+H:\teaching\SD2\3 - Simple Objects\Class Examples\Classes1\obj\Debug\Classes1.csprojResolveAssemblyReference.cache

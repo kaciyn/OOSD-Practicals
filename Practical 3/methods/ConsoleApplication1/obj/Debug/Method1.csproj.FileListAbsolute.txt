@@ -1,0 +1,20 @@
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit6_methods\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit6_methods\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit6_methods\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit6_methods\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit6_methods\ConsoleApplication1\obj\Debug\ResolveAssemblyReference.cache
+Q:\Neil_U\SD2\4 - Methods\practical\methods\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+Q:\Neil_U\SD2\4 - Methods\practical\methods\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+Q:\Neil_U\SD2\4 - Methods\practical\methods\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+Q:\Neil_U\SD2\4 - Methods\practical\methods\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+Q:\Neil_U\SD2\4 - Methods\practical\methods\ConsoleApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\SD2\3 - Methods\Practical 3\methods\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\SD2\3 - Methods\Practical 3\methods\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\SD2\3 - Methods\Practical 3\methods\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\SD2\3 - Methods\Practical 3\methods\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\SD2\3 - Methods\Practical 3\methods\ConsoleApplication1\obj\Debug\ResolveAssemblyReference.cache
+H:\teaching\SD2\3 - Methods\Practical 3\methods\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+H:\teaching\SD2\3 - Methods\Practical 3\methods\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+H:\teaching\SD2\3 - Methods\Practical 3\methods\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+H:\teaching\SD2\3 - Methods\Practical 3\methods\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+H:\teaching\SD2\3 - Methods\Practical 3\methods\ConsoleApplication1\obj\Debug\ResolveAssemblyReference.cache

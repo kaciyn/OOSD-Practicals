@@ -1,0 +1,15 @@
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit6_methods\Method3\bin\Debug\Method3.exe
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit6_methods\Method3\bin\Debug\Method3.pdb
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit6_methods\Method3\obj\Debug\ResolveAssemblyReference.cache
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit6_methods\Method3\obj\Debug\Method3.exe
+G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit6_methods\Method3\obj\Debug\Method3.pdb
+Q:\Neil_U\SD2\4 - Methods\practical\methods\Method3\bin\Debug\Method3.exe
+Q:\Neil_U\SD2\4 - Methods\practical\methods\Method3\bin\Debug\Method3.pdb
+Q:\Neil_U\SD2\4 - Methods\practical\methods\Method3\obj\Debug\ResolveAssemblyReference.cache
+Q:\Neil_U\SD2\4 - Methods\practical\methods\Method3\obj\Debug\Method3.exe
+Q:\Neil_U\SD2\4 - Methods\practical\methods\Method3\obj\Debug\Method3.pdb
+C:\SD2\3 - Methods\Practical 3\methods\Method3\bin\Debug\Method3.exe
+C:\SD2\3 - Methods\Practical 3\methods\Method3\bin\Debug\Method3.pdb
+C:\SD2\3 - Methods\Practical 3\methods\Method3\obj\Debug\ResolveAssemblyReference.cache
+C:\SD2\3 - Methods\Practical 3\methods\Method3\obj\Debug\Method3.exe
+C:\SD2\3 - Methods\Practical 3\methods\Method3\obj\Debug\Method3.pdb
