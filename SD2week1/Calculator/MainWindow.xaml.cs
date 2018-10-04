@@ -60,15 +60,11 @@ namespace Calculator
                     break;
 
                 case "Operator":
-                    heldNumber = int.Parse(txtInput.Text);
-                    pendingOperation = buttonContent;
-                    txtInput.Text = "";
-                    ToggleButtons("Equals");
+                    HandleOperatorButton(buttonContent);
                     break;
 
                 case "Equals":
                     Calculate();
-                    newCalculationIsNext = true;
                     break;
 
                 default:
@@ -76,6 +72,14 @@ namespace Calculator
                     break;
             }
 
+        }
+
+        private void HandleOperatorButton(string buttonContent)
+        {
+            heldNumber = int.Parse(txtInput.Text);
+            pendingOperation = buttonContent;
+            txtInput.Text = "";
+            ToggleButtons("Equals");
         }
 
         private void Reset()
@@ -112,6 +116,8 @@ namespace Calculator
                 MessageBox.Show("ERR: Operator cannot be null, please try again");
                 Reset();
             }
+            newCalculationIsNext = true;
+
         }
 
         private void ToggleButtons(string buttonTag)
