@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="FormEnd" Height="188.603" Width="315.257">
     <Grid>
-        <TextBlock x:Name="txtTitle" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="26,10,0,0" Height="28" Width="243" FontSize="16" Text="Acme Software, Universal Installer"/>
+        <TextBlock x:Name="lblTitle" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="26,10,0,0" Height="28" Width="243" FontSize="16" Text="Acme Software, Universal Installer"/>
         <TextBlock x:Name="txtFinished" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="48,51,0,0" Height="43" Width="201" FontSize="8"><Run Text="Thank you &lt;name&gt; for using our software."/><LineBreak/><Run Text="We know that you live in &lt;location&gt;, "/><LineBreak/><Run Text="so don't fuckin test us (-:"/></TextBlock>
-        <Button x:Name="btnFinished" Content="Finished" Margin="186,113,46,18"/>
+        <Button x:Name="btnFinished" Content="Finished" Margin="186,113,46,18" Click="btnFinished_Click"/>
 
     </Grid>
 </Window>

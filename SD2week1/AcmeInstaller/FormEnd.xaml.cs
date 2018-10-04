@@ -23,11 +23,12 @@ namespace AcmeInstaller
         {
             InitializeComponent();
 
-            MainWindow mainWindow;
-
-            txtFinished.Text = $"Thank you {mainWindow.name} for using our software. We know that you live in {}, so don't fuckin test us (-:";
+            txtFinished.Text = $"Thank you {UserInfo.Name} for using our software. We know that you live in {UserInfo.Location}, so don't fuckin test us (-:";
         }
 
-
+        private void btnFinished_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

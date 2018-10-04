@@ -8,9 +8,9 @@
         Title="MainWindow" Height="201.732" Width="305.073">
     <Grid>
         <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="162,114,0,0" RenderTransformOrigin="-0.053,0.364" Click="btnStart_Click"/>
-        <TextBlock x:Name="txtTitle" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="26,10,0,0" Height="28" Width="243" FontSize="16" Text="Acme Software, Universal Installer"/>
-        <TextBox x:Name="txtboxName" TextWrapping="Wrap" Margin="117,61,60,75" TextChanged="TextBox_TextChanged"/>
-        <TextBlock x:Name="txtName" TextWrapping="Wrap" Margin="67,74,185,75"><Run Text="Name"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="lblTitle" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="26,10,0,0" Height="28" Width="243" FontSize="16" Text="Acme Software, Universal Installer"/>
+        <TextBox x:Name="txtName" TextWrapping="Wrap" Margin="117,61,60,75" TextChanged="TextBox_TextChanged" KeyDown="TextBox_Enter"/>
+        <TextBlock x:Name="lblName" TextWrapping="Wrap" Margin="67,74,185,75"><Run Text="Name"/><LineBreak/><Run/></TextBlock>
 
     </Grid>
 </Window>

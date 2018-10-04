@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28010.2003
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hello", "SD2week1\hello.csproj", "{BE3F14F3-DBA1-47C1-8552-8BCBE036FB69}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount", "BankAccount\BankAccount.csproj", "{C6251766-7C36-4373-B142-AF96BE93D3E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeInstaller", "AcmeInstaller\AcmeInstaller.csproj", "{6BF674CB-C3A1-4796-8D0A-3A9229561F5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReminderApp", "ReminderApp\ReminderApp.csproj", "{8C5C5176-FE02-4BF2-9A49-A56754F6CEB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{508016A0-B718-443A-9D83-A745AE83BBE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{6BF674CB-C3A1-4796-8D0A-3A9229561F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BF674CB-C3A1-4796-8D0A-3A9229561F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BF674CB-C3A1-4796-8D0A-3A9229561F5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C5C5176-FE02-4BF2-9A49-A56754F6CEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C5C5176-FE02-4BF2-9A49-A56754F6CEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C5C5176-FE02-4BF2-9A49-A56754F6CEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C5C5176-FE02-4BF2-9A49-A56754F6CEB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508016A0-B718-443A-9D83-A745AE83BBE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508016A0-B718-443A-9D83-A745AE83BBE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508016A0-B718-443A-9D83-A745AE83BBE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508016A0-B718-443A-9D83-A745AE83BBE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

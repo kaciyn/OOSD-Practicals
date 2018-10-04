@@ -29,11 +29,10 @@ namespace AcmeInstaller
                 lstLocations.Items.Add(location);
             }
         }
-        public string selectedLocation;
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            selectedLocation = lstLocations.SelectedValue;
+            UserInfo.Location = lstLocations.SelectedValue.ToString();
         }
 
         private void btnPrevious_btnNext_Click(object sender, RoutedEventArgs e)

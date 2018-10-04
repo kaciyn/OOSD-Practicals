@@ -58,3 +58,18 @@ H:\Practicals\SD2week1\Example2\obj\Debug\Example2.csproj.GenerateResource.cache
 H:\Practicals\SD2week1\Example2\obj\Debug\Example2.csproj.CoreCompileInputs.cache
 H:\Practicals\SD2week1\Example2\obj\Debug\Example2.exe
 H:\Practicals\SD2week1\Example2\obj\Debug\Example2.pdb
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\bin\Debug\Example2.exe.config
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\bin\Debug\Example2.exe
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\bin\Debug\Example2.pdb
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\Example2.csprojResolveAssemblyReference.cache
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\MainWindow.baml
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\SecondWindow.baml
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\MainWindow.g.cs
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\SecondWindow.g.cs
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\App.g.cs
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\Example2_MarkupCompile.cache
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\Example2.g.resources
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\Example2.Properties.Resources.resources
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\Example2.csproj.GenerateResource.Cache
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\Example2.exe
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\Example2\obj\Debug\Example2.pdb

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="FormLocation" Height="282.146" Width="241.78">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="69,23,0,0"><Run Text="Select Your Location"/></TextBlock>
+        <TextBlock x:Name="lblLocations" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="69,23,0,0"><Run Text="Select Your Location"/></TextBlock>
         <ListBox x:Name="lstLocations" Margin="69,49,59,76" SelectionChanged="ListBox_SelectionChanged"/>
         <Button x:Name="btnPrevious" Content="Previous" HorizontalAlignment="Left" Margin="31,196,0,0" VerticalAlignment="Top" Width="75" Click="btnPrevious_btnNext_Click"/>
         <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="132,196,0,0" VerticalAlignment="Top" Width="75" Click="btnPrevious_btnNext_Click"/>

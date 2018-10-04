@@ -30,7 +30,7 @@ namespace BankAccount
 
         private void btnCredit_Click(object sender, RoutedEventArgs e)
         {
-            var amount = Convert.ToDouble(txtboxAmount.Text);
+            var amount = Convert.ToDouble(txtAmount.Text);
             if (balance + amount < 0)
             {
                 MessageBox.Show("You're not allowed to bankrupt yourself!");
@@ -38,14 +38,14 @@ namespace BankAccount
             else
             {
                 balance = balance + amount;
-                lstboxHistory.Items.Add($"£{amount} deposited, balance = £{balance}");
+                lstHistory.Items.Add($"£{amount} deposited, balance = £{balance}");
             }
             txtBalance.Text = balance.ToString();
         }
 
         private void btnDebit_Click(object sender, RoutedEventArgs e)
         {
-            var amount = Convert.ToDouble(txtboxAmount.Text);
+            var amount = Convert.ToDouble(txtAmount.Text);
             if (balance - amount < 0)
             {
                 MessageBox.Show("You're not allowed to bankrupt yourself!");
@@ -53,7 +53,7 @@ namespace BankAccount
             else
             {
                 balance = balance - amount;
-                lstboxHistory.Items.Add($"£{amount} deposited, balance = £{balance}");
+                lstHistory.Items.Add($"£{amount} deposited, balance = £{balance}");
             }
             txtBalance.Text = balance.ToString();
         }

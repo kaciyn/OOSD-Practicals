@@ -52,3 +52,16 @@ H:\Practicals\SD2week1\MyFirstApp\obj\Debug\Example1.csproj.GenerateResource.cac
 H:\Practicals\SD2week1\MyFirstApp\obj\Debug\Example1.csproj.CoreCompileInputs.cache
 H:\Practicals\SD2week1\MyFirstApp\obj\Debug\MyFirstApp.exe
 H:\Practicals\SD2week1\MyFirstApp\obj\Debug\MyFirstApp.pdb
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\bin\Debug\MyFirstApp.exe.config
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\bin\Debug\MyFirstApp.exe
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\bin\Debug\MyFirstApp.pdb
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\obj\Debug\Example1.csprojResolveAssemblyReference.cache
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\obj\Debug\MainWindow.baml
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\obj\Debug\MainWindow.g.cs
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\obj\Debug\App.g.cs
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\obj\Debug\MyFirstApp_MarkupCompile.cache
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\obj\Debug\MyFirstApp.g.resources
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\obj\Debug\MyFirstApp.Properties.Resources.resources
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\obj\Debug\Example1.csproj.GenerateResource.Cache
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\obj\Debug\MyFirstApp.exe
+D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\SD2week1\MyFirstApp\obj\Debug\MyFirstApp.pdb

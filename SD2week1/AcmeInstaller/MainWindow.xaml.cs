@@ -25,11 +25,17 @@ namespace AcmeInstaller
             InitializeComponent();
         }
 
-        public string name = "";
-
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            name = txtboxName.Text;
+            UserInfo.Name = txtName.Text;
+        }
+
+        private void TextBox_Enter(object sender, KeyEventArgs e)
+        {
+            if (e.Key==Key.Enter)
+            {
+                btnStart_Click(this,new RoutedEventArgs());
+            }
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
