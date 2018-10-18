@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Unit8">
+</Property><Property Name="Solution File" Value="C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Unit8.sln">
+</Property><Property Name="User Options File" Value="C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Unit8.suo">
+</Property><Property Name="Date" Value="26 July 2011">
+</Property><Property Name="Time" Value="15:26">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Unit8.sln" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Unit8.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Unit8.suo" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Unit8.suo">
+</Event><Event ErrorLevel="0" Project="Poly1" Source="Poly1\Poly1.csproj" Description="Project file successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Poly1\Poly1.csproj">
+</Event><Event ErrorLevel="0" Project="Poly1" Source="Poly1\Car.cs" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Poly1\Car.cs">
+</Event><Event ErrorLevel="0" Project="Poly1" Source="Poly1\Program.cs" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Poly1\Program.cs">
+</Event><Event ErrorLevel="0" Project="Poly1" Source="Poly1\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Poly1\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Poly1" Source="Poly1\Truck.cs" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Poly1\Truck.cs">
+</Event><Event ErrorLevel="0" Project="Poly1" Source="Poly1\Vehicle.cs" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Poly1\Vehicle.cs">
+</Event><Event ErrorLevel="0" Project="Poly1" Source="Poly1\ClassDiagram1.cd" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Poly1\ClassDiagram1.cd">
+</Event><Event ErrorLevel="0" Project="Poly1" Source="Poly1\ClassDiagram2.cd" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Poly1\ClassDiagram2.cd">
+</Event><Event ErrorLevel="0" Project="Poly1" Source="Poly1\Poly1.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Poly1" Source="Poly1\Poly1.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Flights" Source="Flights\Flights.csproj" Description="Project file successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Flights\Flights.csproj">
+</Event><Event ErrorLevel="0" Project="Flights" Source="Flights\Passenger.cs" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Flights\Passenger.cs">
+</Event><Event ErrorLevel="0" Project="Flights" Source="Flights\Flight.cs" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Flights\Flight.cs">
+</Event><Event ErrorLevel="0" Project="Flights" Source="Flights\Program.cs" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Flights\Program.cs">
+</Event><Event ErrorLevel="0" Project="Flights" Source="Flights\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\SD2\7 - Polymorph &amp; Interfaces\practical\Unit7\Backup\Flights\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Flights" Source="Flights\Flights.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Flights" Source="Flights\Flights.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Unit8.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Unit8.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Poly1" Source="Poly1\Poly1.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Flights" Source="Flights\Flights.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

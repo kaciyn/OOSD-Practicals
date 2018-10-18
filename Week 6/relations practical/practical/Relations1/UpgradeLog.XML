@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Relations1">
+</Property><Property Name="Solution File" Value="C:\SD2\5 - Relations\practical\Relations1\Relations1.sln">
+</Property><Property Name="Date" Value="26 July 2011">
+</Property><Property Name="Time" Value="14:39">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Relations1.sln" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations1.sln">
+</Event><Event ErrorLevel="0" Project="Relations1" Source="Relations1\Relations1.csproj" Description="Project file successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations1\Relations1.csproj">
+</Event><Event ErrorLevel="0" Project="Relations1" Source="Relations1\House.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations1\House.cs">
+</Event><Event ErrorLevel="0" Project="Relations1" Source="Relations1\Person.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations1\Person.cs">
+</Event><Event ErrorLevel="0" Project="Relations1" Source="Relations1\Program.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations1\Program.cs">
+</Event><Event ErrorLevel="0" Project="Relations1" Source="Relations1\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations1\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Relations1" Source="Relations1\ClassDiagram2.cd" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations1\ClassDiagram2.cd">
+</Event><Event ErrorLevel="0" Project="Relations1" Source="Relations1\Relations1.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Relations1" Source="Relations1\Relations1.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="Relations2" Source="..\Relations2\Relations2.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Relations2.csproj" Description="Project file successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\Relations2.csproj">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Program.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\Program.cs">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Student.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\Student.cs">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Student.Designer.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\Student.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\University.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\University.cs">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\University.Designer.cs" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\University.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\ClassDiagram1.cd" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\ClassDiagram1.cd">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Properties\Settings.settings" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Properties\Resources.resx" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Student.resx" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\Student.resx">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\University.resx" Description="File successfully backed up as C:\SD2\5 - Relations\practical\Relations1\Backup\Relations2\University.resx">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Relations2.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Relations2" Source="..\Relations2\Relations2.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Relations1.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Relations1.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Relations1" Source="Relations1\Relations1.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Relations2" Source="..\Relations2\Relations2.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
