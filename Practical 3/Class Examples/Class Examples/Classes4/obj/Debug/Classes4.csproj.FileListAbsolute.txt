@@ -1,9 +1,0 @@
-D:\SD2\1 - Intro to Objects\2_5 classes\Classes4\bin\Debug\Classes4.exe
-D:\SD2\1 - Intro to Objects\2_5 classes\Classes4\bin\Debug\Classes4.pdb
-D:\SD2\1 - Intro to Objects\2_5 classes\Classes4\obj\Debug\ResolveAssemblyReference.cache
-D:\SD2\1 - Intro to Objects\2_5 classes\Classes4\obj\Debug\Classes4.exe
-D:\SD2\1 - Intro to Objects\2_5 classes\Classes4\obj\Debug\Classes4.pdb
-D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Practical 3\Class Examples\Class Examples\Classes4\bin\Debug\Classes4.exe
-D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Practical 3\Class Examples\Class Examples\Classes4\bin\Debug\Classes4.pdb
-D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Practical 3\Class Examples\Class Examples\Classes4\obj\Debug\Classes4.exe
-D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Practical 3\Class Examples\Class Examples\Classes4\obj\Debug\Classes4.pdb

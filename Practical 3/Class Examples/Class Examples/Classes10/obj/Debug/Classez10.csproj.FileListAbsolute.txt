@@ -1,9 +1,0 @@
-G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit7_classes\Classes10\obj\Debug\Classes10.exe
-G:\alawson\teaching\Applications Programming co32059\2006\units_6_to_8_co32059\unit7_classes\Classes10\obj\Debug\Classes10.pdb
-D:\SD2\1 - Intro to Objects\2_5 classes\Classes10\bin\Debug\Classes10.exe
-D:\SD2\1 - Intro to Objects\2_5 classes\Classes10\bin\Debug\Classes10.pdb
-D:\SD2\1 - Intro to Objects\2_5 classes\Classes10\obj\Debug\ResolveAssemblyReference.cache
-D:\SD2\1 - Intro to Objects\2_5 classes\Classes10\obj\Debug\Classes10.exe
-D:\SD2\1 - Intro to Objects\2_5 classes\Classes10\obj\Debug\Classes10.pdb
-C:\SD2\SD2\2 - Simple Objects\Class Examples\Classes10\obj\Debug\Classes10.exe
-C:\SD2\SD2\2 - Simple Objects\Class Examples\Classes10\obj\Debug\Classes10.pdb

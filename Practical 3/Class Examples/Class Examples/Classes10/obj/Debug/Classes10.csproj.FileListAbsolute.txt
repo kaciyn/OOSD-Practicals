@@ -1,4 +1,0 @@
-D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Practical 3\Class Examples\Class Examples\Classes10\bin\Debug\Classes10.exe
-D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Practical 3\Class Examples\Class Examples\Classes10\bin\Debug\Classes10.pdb
-D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Practical 3\Class Examples\Class Examples\Classes10\obj\Debug\Classes10.exe
-D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Practical 3\Class Examples\Class Examples\Classes10\obj\Debug\Classes10.pdb
