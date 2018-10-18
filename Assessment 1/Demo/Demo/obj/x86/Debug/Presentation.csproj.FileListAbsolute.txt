@@ -63,3 +63,24 @@ D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Assessment 1\Demo\Demo\obj\x86\De
 D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Presentation.csproj.GenerateResource.Cache
 D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Demo.exe
 D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Demo.pdb
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\bin\Debug\Demo.exe
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\bin\Debug\Demo.pdb
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\bin\Debug\BusinessObjects.dll
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\bin\Debug\System.ValueTuple.dll
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\bin\Debug\BusinessObjects.pdb
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\bin\Debug\BusinessObjects.dll.config
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Presentation.csprojAssemblyReference.cache
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\MainWindow.baml
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\AllCustomersWindow.g.cs
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\MainWindow.g.cs
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\App.g.cs
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Demo_MarkupCompile.cache
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Demo_MarkupCompile.lref
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\AllCustomersWindow.baml
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Demo.g.resources
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Demo.Properties.Resources.resources
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Presentation.csproj.GenerateResource.cache
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Presentation.csproj.CoreCompileInputs.cache
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Presentation.csproj.CopyComplete
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Demo.exe
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\Demo\obj\x86\Debug\Demo.pdb

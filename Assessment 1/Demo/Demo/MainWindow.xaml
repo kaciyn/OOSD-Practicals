@@ -48,6 +48,6 @@
         <TextBox x:Name="txtEmailDisplay" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="123,209,0,0" Tag="DisplayInfo"/>
         <TextBox x:Name="txtSkypeDisplay" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="123,237,0,0" Tag="DisplayInfo"/>
         <TextBox x:Name="txtPhoneDisplay" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="123,264,0,0" Tag="DisplayInfo"/>
-        <TextBox x:Name="txtPreferredContactDisplay" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="123,292,0,0" Tag="DisplayInfo"/>
+        <TextBox x:Name="txtPreferredContactDisplay" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="123,292,0,0" Tag="DisplayInfo"/>
     </Grid>
 </Window>

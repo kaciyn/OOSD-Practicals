@@ -14,3 +14,15 @@ D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Assessment 1\Demo\BusinessObjects
 D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Assessment 1\Demo\BusinessObjects\obj\Debug\Business.csprojResolveAssemblyReference.cache
 D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Assessment 1\Demo\BusinessObjects\obj\Debug\BusinessObjects.dll
 D:\Big Bad Code Repos\My Spawn\Edumcation\OOSD\Assessment 1\Demo\BusinessObjects\obj\Debug\BusinessObjects.pdb
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\bin\Debug\BusinessObjects.dll.config
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\bin\Debug\BusinessObjects.dll
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\bin\Debug\BusinessObjects.pdb
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\bin\Debug\EntityFramework.dll
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\bin\Debug\EntityFramework.xml
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\obj\Debug\Business.csprojAssemblyReference.cache
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\obj\Debug\Business.csproj.CopyComplete
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\obj\Debug\BusinessObjects.dll
+C:\Users\40406489\Documents\OOSD\Assessment 1\Demo\BusinessObjects\obj\Debug\BusinessObjects.pdb
