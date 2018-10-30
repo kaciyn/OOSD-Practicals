@@ -5,33 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Demo"
         mc:Ignorable="d"
-        Title="AllCustomersWindow" Height="448.803" Width="260.036">
+        Title="AllCustomersWindow" Height="448.803" Width="550.109">
     <Grid>
-        <TextBlock x:Name="lblCustomerInformation" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Customer Information" VerticalAlignment="Top" Margin="10,102,0,0" Height="34" Width="234" FontSize="20"/>
-        <TextBlock x:Name="lblID_Info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Customer ID" VerticalAlignment="Top" Margin="10,136,0,0" Height="16" Width="70"/>
-        <TextBlock x:Name="lblName_Info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" Margin="12,276,0,0" Height="16" Width="34"/>
-        <TextBlock x:Name="lblSurname_Info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Skype ID" VerticalAlignment="Top" Margin="10,248,0,0" Height="16" Width="46"/>
-        <TextBlock x:Name="lblEmail_Info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Margin="12,220,0,0" Height="16" Width="34"/>
-        <TextBlock x:Name="lblSkype_Info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Surname" VerticalAlignment="Top" Margin="12,192,0,0" Height="16" Width="47"/>
-        <TextBlock x:Name="lblPhone_Info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Margin="12,164,0,0" RenderTransformOrigin="0.614,2.803" Height="16" Width="32"/>
-        <TextBlock x:Name="lblPreferredContact_Info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Preferred Contact" VerticalAlignment="Top" Margin="10,304,0,0" Height="16" Width="99"/>
-
-        <TextBox x:Name="txtIDDisplay" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="114,137,0,0" Tag="DisplayInfo"/>
-        <TextBox x:Name="txtNameDisplay" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="114,165,0,0" Tag="DisplayInfo"/>
-        <TextBox x:Name="txtSurnameDisplay" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="114,193,0,0" Tag="DisplayInfo"/>
-        <TextBox x:Name="txtEmailDisplay" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="114,221,0,0" Tag="DisplayInfo"/>
-        <TextBox x:Name="txtSkypeDisplay" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="114,249,0,0" Tag="DisplayInfo"/>
-        <TextBox x:Name="txtPhoneDisplay" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="114,276,0,0" Tag="DisplayInfo"/>
-        <TextBox x:Name="txtPreferredContactDisplay" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="114,304,0,0" Tag="DisplayInfo"/>
-        <Button x:Name="btnDismiss" Content="Dismiss" Margin="167,10,10,0" Click="btnDismiss_Click" Height="21" VerticalAlignment="Top"/>
-        <TextBlock x:Name="lblSelectID" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="11,7,0,0"><Run Text="Select Customer"/><Run Text=" "/><Run Text="ID"/></TextBlock>
-        <ListBox x:Name="lstboxCustomerIDs" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="100" Margin="12,28,0,0" SelectionChanged="lstboxCustomerIDs_SelectionChanged"/>
-
-        <Button x:Name="btnShowAdvanced" Content="Toggle Advanced" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" Margin="147,36,0,0" Height="23" MouseEnter="btnShowAdvanced_OnMouseEnter" MouseLeave="btnShowAdvanced_OnMouseLeave" Opacity="0" Click="btnShowAdvanced_Click"/>
-        <TextBlock x:Name="lblPreferredContactSpecificAdvanced" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="12,370,0,0" Opacity="0"/>
-        <TextBox x:Name="txtPreferredContactAdvanced" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="114,370,0,0" Tag="DisplayInfo" Opacity="0"/>
-        <TextBox x:Name="txtPreferredContactDisplayAdvanced" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="114,330,0,0" Tag="DisplayInfo" Opacity="0"/>
-        <TextBlock x:Name="lblPreferredContactAdvanced" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Preferred Contact" VerticalAlignment="Top" Margin="10,330,0,0" Height="16" Width="99" Opacity="0"/>
+        <TextBlock x:Name="lblCustomerInformation" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="12,9,0,0" Height="34" Width="234" FontSize="20"><Run Text="All "/><Run Text="Customer Information"/></TextBlock>
+        <Button x:Name="btnDismiss" Content="Dismiss" Margin="0,10,10,0" Click="btnDismiss_Click" Height="21" VerticalAlignment="Top" HorizontalAlignment="Right" Width="96"/>
+        <ListView x:Name="lstviewReminders" HorizontalAlignment="Left" Height="360" VerticalAlignment="Top" Width="509" Margin="12,48,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="auto" DisplayMemberBinding="{Binding ID}" />
+                    <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Surname" Width="auto" DisplayMemberBinding="{Binding Surname}" />
+                    <GridViewColumn Header="Email" Width="auto" DisplayMemberBinding="{Binding Email}" />
+                    <GridViewColumn Header="SkypeID" Width="auto" DisplayMemberBinding="{Binding SkypeID}" />
+                    <GridViewColumn Header="Phone" Width="auto" DisplayMemberBinding="{Binding Phone}" />
+                    <GridViewColumn Header="Preferred Contact" Width="auto" DisplayMemberBinding="{Binding PreferredContact}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>

@@ -18,12 +18,13 @@ namespace Demo
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// Author: Kaci
-    /// Modified: 2018/10/14
+    /// Modified: 2018/10/29
     /// </summary>
     public partial class MainWindow : Window
     {
         private MailingList store = new MailingList();//a mailing list of customers
         private UIElementCollection allWindowElements;
+        private bool AdvancedContactsVisible;//only relevant for the extra contact fields, see comments below
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
@@ -36,10 +37,12 @@ namespace Demo
             allWindowElements = windowPanel.Children; //gets all UI elements in window
 
             store.Add(new Customer { ID = 10001, Name = "Kaci", Surname = "Yanova", Email = "sldjfk@slksldkfj.com", SkypeID = "sdkljf234", Phone = "239847293", PreferredContact = "email" }); //default customer for testing so I don't have to enter a new customer every time 
+
+            lstboxCustomerIDs.ItemsSource = store.IDs;
         }
 
         /// <summary>
-        /// Adds new customer from add new customer form textboxes on click
+        /// Adds new customer from add new customer form textboxes on click & updates customer listbox to reflect change
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
@@ -50,7 +53,11 @@ namespace Demo
             {
                 newCustomer = GetNewCustomerInfo();
                 store.Add(newCustomer);
-                ClearAddNewCustomerForm();
+                ClearTextBoxesWithTag("AddNewForm");
+
+                lstboxCustomerIDs.ItemsSource = store.IDs;
+                lstboxCustomerIDs.UpdateLayout();
+
             }
             catch (Exception exception)
             {
@@ -125,11 +132,11 @@ namespace Demo
         }
 
         /// <summary>
-        /// Clears the add new customer form textboxes.
+        /// Clears textboxes with supplied tag 
         /// </summary>
-        private void ClearAddNewCustomerForm()
+        private void ClearTextBoxesWithTag(string tag)
         {
-            var addNewFormTextboxes = allWindowElements.OfType<TextBox>().Where(textbox => (string)textbox.Tag == "AddNewForm"); //selects Add New Customer form textboxes
+            var addNewFormTextboxes = allWindowElements.OfType<TextBox>().Where(textbox => (string)textbox.Tag == tag); //selects Add New Customer form textboxes
 
             foreach (var textbox in addNewFormTextboxes)
             {
@@ -202,11 +209,18 @@ namespace Demo
             txtEmailDisplay.Text = customer.Email;
             txtSkypeDisplay.Text = customer.SkypeID;
             txtPhoneDisplay.Text = customer.Phone;
-            txtPreferredContactDisplay.Text = customer.GetPreferredContact();
+            txtPreferredContactDisplay.Text = customer.PreferredContact;
+
+
+            //some extra preferred contact field work I'm not sure is wanted, see comment further comments below
+            var preferredContactFull = customer.GetPreferredContact();
+            txtPreferredContactDisplayAdvanced.Text = preferredContactFull;
+            lblPreferredContactSpecificAdvanced.Text = preferredContactFull.Split(':').First().Trim();
+            txtPreferredContactAdvanced.Text = preferredContactFull.Split(':').Last().Trim();
         }
 
         /// <summary>
-        /// Deletes the customer by ID if such a customer exists.
+        /// Deletes the customer by ID if such a customer exists & updates customer listbox to reflect change.
         /// </summary>
         /// <param name="customerID">The customer identifier.</param>
         private void DeleteCustomer(int customerID)
@@ -220,7 +234,81 @@ namespace Demo
             {
                 store.Delete(customerID);
                 MessageBox.Show($"Customer with ID {customerID} deleted.");
+                lstboxCustomerIDs.ItemsSource = store.IDs;
+                lstboxCustomerIDs.UpdateLayout();
             }
+        }
+
+        /// <summary>
+        /// Finds and displays selected customer info from listbox in textboxes. If selected customer is deleted, clears the customer info form
+        /// </summary>
+        private void lstboxCustomerIDs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                var selectedCustomer = store.Find((int)lstboxCustomerIDs.SelectedItem);
+                DisplayCustomerInfo(selectedCustomer);
+            }
+            catch (Exception emptyCustomerCollection) when (emptyCustomerCollection.Message ==
+                                                            "Object reference not set to an instance of an object.")
+            {
+                ClearTextBoxesWithTag("DisplayInfo");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        //Methods below aren't really part of the assignment but they do account for some of the ambiguity in the assignment in case I didn't interpret what exactly the preferred contact field is supposed to display, as well as a field displaying the specific contact of the customer, which was implemented because it "would be neat"
+        //The fields and button to show them have their opacity set to zero by default so it doesn't clutter up the UI
+
+        /// <summary>
+        /// Sets show advanced button opacity to 100% on hover
+        /// </summary>
+        private void btnShowAdvanced_OnMouseEnter(object sender, MouseEventArgs e)
+        {
+            btnShowAdvanced.Opacity = 100;
+        }
+
+        /// <summary>
+        /// Sets show advanced button opacity to 100% on hover
+        /// </summary>
+        private void btnShowAdvanced_OnMouseLeave(object sender, MouseEventArgs e)
+        {
+            btnShowAdvanced.Opacity = 0;
+        }
+
+        /// <summary>
+        /// Calls ToggleAdvancedContacts() on click
+        /// </summary>
+        private void btnShowAdvanced_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleAdvancedContacts();
+        }
+
+        /// <summary>
+        /// Toggles the opacity of the advanced contacts fields.
+        /// </summary>
+        private void ToggleAdvancedContacts()
+        {
+            if (AdvancedContactsVisible)
+            {
+                lblPreferredContactSpecificAdvanced.Opacity = 0;
+                lblPreferredContactAdvanced.Opacity = 0;
+                txtPreferredContactAdvanced.Opacity = 0;
+                lblPreferredContactSpecificAdvanced.Opacity = 0;
+                txtPreferredContactDisplayAdvanced.Opacity = 0;
+            }
+            else
+            {
+                lblPreferredContactSpecificAdvanced.Opacity = 100;
+                lblPreferredContactAdvanced.Opacity = 100;
+                txtPreferredContactAdvanced.Opacity = 100;
+                lblPreferredContactSpecificAdvanced.Opacity = 100;
+                txtPreferredContactDisplayAdvanced.Opacity = 100;
+            }
+            AdvancedContactsVisible = !AdvancedContactsVisible;
         }
     }
 }
