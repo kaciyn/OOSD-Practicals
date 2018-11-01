@@ -91,7 +91,7 @@ namespace BusinessObjects
             {
                 if (!value.Contains("@"))
                 {
-                    throw new ArgumentException("Value entered not a valid email");
+                    throw new ArgumentException("Value entered not a valid email; must contain \"@\"");
                 }
                 _email = value;
             }

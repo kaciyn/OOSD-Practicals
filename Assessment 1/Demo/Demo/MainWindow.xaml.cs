@@ -18,7 +18,7 @@ namespace Demo
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// Author: Kaci
-    /// Modified: 2018/10/29
+    /// Modified: 2018/10/31
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -36,8 +36,6 @@ namespace Demo
             var windowPanel = (Panel)Content; //gets contents of MainWindow
             allWindowElements = windowPanel.Children; //gets all UI elements in window
 
-            store.Add(new Customer { ID = 10001, Name = "Kaci", Surname = "Yanova", Email = "sldjfk@slksldkfj.com", SkypeID = "sdkljf234", Phone = "239847293", PreferredContact = "email" }); //default customer for testing so I don't have to enter a new customer every time 
-
             lstboxCustomerIDs.ItemsSource = store.IDs;
         }
 
@@ -48,10 +46,9 @@ namespace Demo
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void btnAddNewCustomer_Click(object sender, RoutedEventArgs e)
         {
-            var newCustomer = new Customer();
             try
             {
-                newCustomer = GetNewCustomerInfo();
+                var newCustomer = GetNewCustomerInfo();
                 store.Add(newCustomer);
                 ClearTextBoxesWithTag("AddNewForm");
 
@@ -209,12 +206,12 @@ namespace Demo
             txtEmailDisplay.Text = customer.Email;
             txtSkypeDisplay.Text = customer.SkypeID;
             txtPhoneDisplay.Text = customer.Phone;
-            txtPreferredContactDisplay.Text = customer.PreferredContact;
+            txtPreferredContactDisplay.Text = customer.GetPreferredContact();
 
 
-            //some extra preferred contact field work I'm not sure is wanted, see comment further comments below
+            //some extra preferred contact field work I'm not sure is wanted, see further comments below
             var preferredContactFull = customer.GetPreferredContact();
-            txtPreferredContactDisplayAdvanced.Text = preferredContactFull;
+            txtPreferredContactDisplayAdvanced.Text = customer.PreferredContact;
             lblPreferredContactSpecificAdvanced.Text = preferredContactFull.Split(':').First().Trim();
             txtPreferredContactAdvanced.Text = preferredContactFull.Split(':').Last().Trim();
         }
