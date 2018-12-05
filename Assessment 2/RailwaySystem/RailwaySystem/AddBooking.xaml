@@ -1,0 +1,30 @@
+﻿<Window x:Class="RailwaySystem.AddBooking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RailwaySystem"
+        mc:Ignorable="d"
+        Title="AddBooking" Height="328.87" Width="233.756">
+    <Grid>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" Margin="117,44,0,0"/>
+        <TextBlock x:Name="lbl" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="4,49,0,0" Width="108" TextAlignment="Right"><Run Text="Passenger "/><Run Text="Name"/></TextBlock>
+        <TextBlock x:Name="lbl_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Train" VerticalAlignment="Top" Margin="4,76,0,0" Width="108" TextAlignment="Right"/>
+        <TextBlock x:Name="lbl_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Departure Station" VerticalAlignment="Top" Margin="4,103,0,0" Width="108" TextAlignment="Right"/>
+        <TextBlock x:Name="lbl_Copy2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Destination Station" VerticalAlignment="Top" Margin="4,130,0,0" Width="108" TextAlignment="Right"/>
+        <TextBlock x:Name="lbl_Copy3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="First Class" VerticalAlignment="Top" Margin="4,153,0,0" Width="108" TextAlignment="Right"/>
+        <TextBlock x:Name="lbl_Copy4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Cabin" VerticalAlignment="Top" Margin="4,174,0,0" Width="108" TextAlignment="Right"/>
+        <TextBlock x:Name="lbl_Copy5" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Coach" VerticalAlignment="Top" Margin="4,200,0,0" Width="108" TextAlignment="Right"/>
+        <TextBlock x:Name="lbl_Copy6" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Seat" VerticalAlignment="Top" Margin="4,227,0,0" Width="108" TextAlignment="Right"/>
+        <ComboBox x:Name="ddTrain" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="117,72,0,0"/>
+        <ComboBox x:Name="ddTrain_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="117,99,0,0"/>
+        <ComboBox x:Name="ddTrain_Copy1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="117,126,0,0"/>
+        <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="117,156,0,0" Width="17"/>
+        <ComboBox x:Name="ddTrain_Copy2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="117,196,0,0"/>
+        <CheckBox Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="117,176,0,0" Width="17"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="117,223,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Add New Booking" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="20" Width="195" TextAlignment="Right"/>
+        <Button Content="Add Booking" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="117,258,0,0" Height="30"/>
+
+    </Grid>
+</Window>
