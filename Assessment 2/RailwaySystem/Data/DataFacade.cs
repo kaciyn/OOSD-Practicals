@@ -65,11 +65,6 @@ namespace Data
                 Serialisers.BookingSerialiser(bookingDb.bookings);
             }
 
-            public List<Booking> GetAllBookings()
-            {
-                return bookingDb.bookings;
-            }
-
             /// <summary>
             /// Finds the bookings on train.
             /// </summary>

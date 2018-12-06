@@ -49,7 +49,6 @@
     <Compile Include="ExpressTrain.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Fare.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Station.cs" />
     <Compile Include="StoppingTrain.cs" />
