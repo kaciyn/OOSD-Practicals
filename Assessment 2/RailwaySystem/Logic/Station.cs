@@ -1,8 +1,12 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace Logic
 {
-    [DataContract, KnownType(typeof(Station))]
+    [Serializable]
+    [XmlInclude(typeof(Station))]
+    [DataContract(Namespace = ""), KnownType(typeof(Station))]
     public class Station
     {
         public enum StationType

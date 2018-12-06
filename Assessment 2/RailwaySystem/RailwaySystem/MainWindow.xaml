@@ -8,14 +8,14 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         x:Class="RailwaySystem.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="518.703" Width="707.5">
+        Title="MainWindow" Height="518.703" Width="588.5">
     <Grid>
-        <ListView x:Name="lstviewBookings" HorizontalAlignment="Left" Height="410" VerticalAlignment="Top" Width="297" Margin="393,62,0,0">
+        <ListView x:Name="lstviewBookings" HorizontalAlignment="Left" Height="410" VerticalAlignment="Top" Width="161" Margin="393,62,0,0">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
-                    <GridViewColumn Header="Coach" Width="auto" DisplayMemberBinding="{Binding ID}" />
-                    <GridViewColumn Header="Seat" Width="auto" DisplayMemberBinding="{Binding Surname}" />
+                    <GridViewColumn Header="Coach" Width="auto" DisplayMemberBinding="{Binding Coach}" />
+                    <GridViewColumn Header="Seat" Width="auto" DisplayMemberBinding="{Binding Seat}" />
                 </GridView>
             </ListView.View>
         </ListView>
@@ -34,13 +34,13 @@
         <TextBlock x:Name="lblFilterstations" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,39,0,0" FontSize="14"><Run Text="Departure "/><Run Text="&amp; Destination "/></TextBlock>
 
         <ComboBox x:Name="ddDeparture" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="10,62,0,0" SelectedIndex="0" />
-        <ComboBox x:Name="ddDestination" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="10,89,0,0" SelectedIndex="5"/>
+        <ComboBox x:Name="ddDestination" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="10,89,0,0" SelectedIndex="5" />
        
         <Button x:Name="btnClearFilters" Content="Reset Filter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="10,235,0,0" Height="35" Click="btnClick" FontSize="14" Tag="Reset"/>
         <TextBlock x:Name="lblSelectTrain" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Select Train" VerticalAlignment="Top" Margin="192,37,0,0" FontSize="16"/>
         <TextBlock x:Name="lblSelectTrain_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Bookings" VerticalAlignment="Top" Margin="393,36,0,0" FontSize="16"/>
         <Button x:Name="btnFilterStations" Content="Filter by Stations" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="10,116,0,0" Height="26" Tag="FilterStations" Click="btnClick"/>
         <Button x:Name="btnFilterStations_Copy" Content="Filter by Departure" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="10,199,0,0" Height="26" Tag="FilterDeparture" Click="btnClick"/>
-        <DatePicker x:Name="dateDeparture" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,170,0,0" RenderTransformOrigin="0.529,1.042" Width="167"/>
+        <DatePicker x:Name="dateDeparture" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,170,0,0" Language="en-GB" RenderTransformOrigin="0.529,1.042" Width="167" DisplayDate="2018-12-06"/>
     </Grid>
 </Window>

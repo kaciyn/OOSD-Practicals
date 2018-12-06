@@ -1,19 +1,21 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace Logic
 {
-    [DataContract, KnownType(typeof(StoppingTrain))]
+    [Serializable]
+    [XmlInclude(typeof(Station))]
+    [DataContract(Namespace = ""), KnownType(typeof(StoppingTrain))]
     public class StoppingTrain : Train
     {
+        protected StoppingTrain(): base()
+        {
 
-//        public StoppingTrain(string id, TrainInfoStub trainInfoStub)
-//        {
-//            base.ID = id;//todo make id gen here??
-//        }
+        }
+        public StoppingTrain(TrainInfoHolder trainInfoHolder, string id) : base(trainInfoHolder, id)
+        {
 
-//        public StoppingTrain():base
-//        {
-//            base;
-//        }
+        }
     }
 }

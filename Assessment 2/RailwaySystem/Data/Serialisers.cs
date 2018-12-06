@@ -2,79 +2,107 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 
 namespace Data
 {
     public class Serialisers
     {
-        private static readonly string storagePath = $"{AppDomain.CurrentDomain.BaseDirectory}\\Storage\\";
+        private static readonly string storagePath = $"{AppDomain.CurrentDomain.BaseDirectory}\\_PersistentStorage\\";
+        private static readonly string trainStorageFilename = "Trains.xml";
+        private static readonly string bookingStorageFilename = "Bookings.xml";
 
         public static void TrainSerialiser(List<Train> trains)
         {
             Directory.CreateDirectory(storagePath);
 
-            //todo this gotta be the actual train id
             var serializer = new DataContractSerializer(typeof(List<Train>));
 
-            var storageFilename = "Trains.xml";
 
-            var filepath = storagePath + storageFilename;
+            var filepath = storagePath + trainStorageFilename;
 
-            //            if (!File.Exists(filepath))
-            //            {
+
             XmlWriterSettings xmlWriterSettings = new XmlWriterSettings { Indent = true, NewLineOnAttributes = true };
             using (XmlWriter xmlWriter = XmlWriter.Create(filepath, xmlWriterSettings))
             {
-//                foreach (var train in trains)
-//                {
-                
-                    serializer.WriteObject(xmlWriter, trains);
-//                }
+                serializer.WriteObject(xmlWriter, trains);
                 xmlWriter.Flush();
                 xmlWriter.Close();
             }
-            //            }
-
-
-            //
-            //idk if this is better
-            //                var xmlDocument = XDocument.Load(filepath);
-            //               
-            //                XElement trainXmlElement = new XElement("Trains",
-            //                    trainDb.db.Select(trainEntry => new XElement(trainEntry.Key, trainEntry.Value)));
-            //
-
-            //                Element to Dictionary:
         }
 
-        //        private void TrainDeserialiser(TrainDatabase trainDb)
-        //        {
-        //            XElement rootElement = XElement.Parse("<root><key>value</key></root>");
-        //            Dictionary<string, string> dict = new Dictionary<string, string>();
-        //            foreach (var el in rootElement.Elements())
-        //            {
-        //                dict.Add(el.Name.LocalName, el.Value);
-        //            }
-        //        }
-
-        private void BookingDeserialiser(BookingDatabase bookingDb)
+        public static List<Train> GetTrains()
         {
-            var serialiser = new DataContractSerializer(typeof(Trains));
+            var filepath = storagePath + trainStorageFilename;
+            return TrainDeserialiser(filepath);
+        }
 
-            using (var stringWriter = new StringWriter())
+        public static List<Train> TrainDeserialiser(string filepath)
+        {
+            if (File.Exists(filepath))
             {
-                using (var xmlTextWriter = new XmlTextWriter(stringWriter))
-                {
-                    xmlTextWriter.Formatting = Formatting.Indented;
-                    serialiser.WriteObject(xmlTextWriter, bookingDb);
-                    xmlTextWriter.Flush();
-                }
+                var xmlDocument = XDocument.Load(filepath);
+                var xmlRoot = new XmlRootAttribute { ElementName = "ArrayOfTrain" };
+
+                var xmlSerializer = new XmlSerializer(typeof(List<Train>), xmlRoot);
+
+                if (xmlDocument.Root != null)
+                    using (var reader = xmlDocument.Root.CreateReader())
+                    {
+                        return (List<Train>)xmlSerializer.Deserialize(reader);
+                    }
             }
 
+            Console.WriteLine("No existing storage file detected, creating new list of trains");
+            return new List<Train>();
+        }
 
+        public static void BookingSerialiser(List<Booking> bookings)
+        {
+            Directory.CreateDirectory(storagePath);
+
+            var serializer = new DataContractSerializer(typeof(List<Booking>));
+
+
+            var filepath = storagePath + bookingStorageFilename;
+
+
+            XmlWriterSettings xmlWriterSettings = new XmlWriterSettings { Indent = true, NewLineOnAttributes = true };
+            using (XmlWriter xmlWriter = XmlWriter.Create(filepath, xmlWriterSettings))
+            {
+                serializer.WriteObject(xmlWriter, bookings);
+                xmlWriter.Flush();
+                xmlWriter.Close();
+            }
+        }
+
+        public static List<Booking> GetBookings()
+        {
+            var filepath = storagePath + bookingStorageFilename;
+            return BookingDeserialiser(filepath);
+        }
+
+        public static List<Booking> BookingDeserialiser(string filepath)
+        {
+            if (File.Exists(filepath))
+            {
+                var xmlDocument = XDocument.Load(filepath);
+                var xmlRoot = new XmlRootAttribute { ElementName = "ArrayOfBooking" };
+
+                var xmlSerializer = new XmlSerializer(typeof(List<Booking>), xmlRoot);
+
+                if (xmlDocument.Root != null)
+                    using (var reader = xmlDocument.Root.CreateReader())
+                    {
+                        return (List<Booking>)xmlSerializer.Deserialize(reader);
+                    }
+            }
+
+            Console.WriteLine("No existing storage file detected, creating new list of bookings");
+            return new List<Booking>();
         }
     }
 }

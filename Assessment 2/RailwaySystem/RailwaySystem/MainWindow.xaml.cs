@@ -1,11 +1,14 @@
 ﻿using Data;
 using Logic;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Markup;
+
 namespace RailwaySystem
 {
     /// <summary>
@@ -13,10 +16,9 @@ namespace RailwaySystem
     /// </summary>
     public partial class MainWindow
     {
-        private Bookings bookings = new Bookings();//all bookings in system
-        private ObservableCollection<Train> trains = new ObservableCollection<Train>();//all trains in system
-                                                                                       //do same like bookings wrapper?? is that a wrapper??????
-        private UIElementCollection allWindowElements;
+        readonly DataFacade.DataFacadeSingleton dataFacade = DataFacade.DataFacadeSingleton.GetInstance();
+
+        private ObservableCollection<Train> trains;//all trains in system
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
@@ -24,68 +26,38 @@ namespace RailwaySystem
         public MainWindow()
         {
             InitializeComponent();
-            Trains();
-            //            };//todo test on a couple trains tomor
-            //            //todo set some of the booking properties according to the train values
-            ////            bookings.Add(new Booking{Name = "Kaci",DestinationStation = ValidStations});
-            //            var windowPanel = (Panel)Content; //gets contents of MainWindow
-            //            allWindowElements = windowPanel.Children; //gets all UI elements in window
-            //
-            //            SetTrainListToDefault();
-            //
-            //            ddDeparture.ItemsSource = ValidStations.Stations;
-            //            ddDestination.ItemsSource = ValidStations.Stations;
+
+            UpdateCurrentData();
+
+            SetTrainListToDefault();
+
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-GB");
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-GB");
+            Language = XmlLanguage.GetLanguage("en-GB");
+
+            ddDeparture.ItemsSource = ValidStations.Stations.Select(station => station.Name).ToList();
+            ddDestination.ItemsSource = ValidStations.Stations.Select(station => station.Name).ToList();
+
+            lstviewTrains.ItemsSource = dataFacade.GetAllTrains().ToObservableCollection();
+
         }
 
-        public void Trains()
+
+        /// <summary>
+        /// Updates local observable collections from persistent data
+        /// </summary>
+        public void UpdateCurrentData()
         {
-            var stopint = new List<Station>
-                {ValidStations.Stations[1], ValidStations.Stations[3], ValidStations.Stations[4]};
-            var int2 = ValidStations.Stations.Where(station => station.Type == Station.StationType.Intermediate).Skip(2)
-                .Take(1).ToList();
+            lstviewTrains.ItemsSource = dataFacade.GetAllTrains().ToObservableCollection();
 
-
-            var trains = new ObservableCollection<Train>
-            {
-
-                new ExpressTrain
-                {
-                    ID = "1S45", Type = Train.TrainType.Express,
-                    DepartureDateTime = new DateTime(2018, 11, 1, 10, 0, 0),
-                    DestinationStation = ValidStations.Stations.First(), OriginStation = ValidStations.Stations.Last(),
-                    IntermediateStations = int2, OffersFirstClass = true
-                },
-
-                new SleeperTrain
-                {
-                    ID = "1E99", Type = Train.TrainType.Sleeper,
-                    DepartureDateTime = new DateTime(2018, 11, 1, 21, 30, 0),
-                    DestinationStation = ValidStations.Stations.Last(), OriginStation = ValidStations.Stations.First(),
-                    OffersFirstClass = true
-                },
-
-                new StoppingTrain
-                {
-                    ID = "1E05", DepartureDateTime = new DateTime(2018, 11, 1, 12, 0, 0),
-                    Type = Train.TrainType.Stopping, DestinationStation = ValidStations.Stations.Last(),
-                    OriginStation = ValidStations.Stations.First(), IntermediateStations = stopint,
-                    OffersFirstClass = true
-                }
-            };
-
-            DataFacade.DataFacadeSingleton dataFacade = DataFacade.DataFacadeSingleton.GetInstance();
-            //Save the module
-            foreach (var train in trains)
-            {
-                dataFacade.Add(train);
-            }
-
-            dataFacade.SaveTrains();
+            lstviewTrains.UpdateLayout();
         }
 
         /// <summary>
         /// Finds and displays all bookings info for selected train.
         /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="SelectionChangedEventArgs"/> instance containing the event data.</param>
         private void lstviewTrains_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -93,13 +65,9 @@ namespace RailwaySystem
                 var selectedTrain = (Train)lstviewTrains.SelectedItem;
                 var selectedTrainID = selectedTrain.ID;
 
-                lstviewBookings.ItemsSource = bookings.FindByTrainID(selectedTrainID);
+                lstviewBookings.ItemsSource = dataFacade.FindBookingsOnTrain(selectedTrainID);
+
                 lstviewTrains.UpdateLayout();
-            }
-            catch (Exception emptyCustomerCollection) when (emptyCustomerCollection.Message ==
-                                                            "Object reference not set to an instance of an object.")//todo update this if you get the error on run
-            {
-                //                ClearTextBoxesWithTag("DisplayInfo");
             }
             catch (Exception exception)
             {
@@ -115,10 +83,12 @@ namespace RailwaySystem
                 case "AddTrain":
                 var addTrainWindow = new AddTrain();
                 addTrainWindow.Show();
+                addTrainWindow.Closing += AddWindowOnClosing;
                 break;
                 case "AddBooking":
                 var addBookingWindow = new AddBooking();
                 addBookingWindow.Show();
+                addBookingWindow.Closing += AddWindowOnClosing;
                 break;
                 case "Reset":
                 SetTrainListToDefault();
@@ -136,15 +106,20 @@ namespace RailwaySystem
             }
         }
 
+        private void AddWindowOnClosing(object sender, CancelEventArgs e)
+        {
+            UpdateCurrentData();
+        }
+
         private void FilterTrains(string filterBy)
         {
             switch (filterBy)
             {
                 case "Stations":
-                lstviewTrains.ItemsSource = GetTrainsRunningBetweenStations() ?? trains;
+                lstviewTrains.ItemsSource = GetTrainsRunningBetweenStations() ?? dataFacade.GetAllTrains().ToObservableCollection();
                 break;
                 case "Departure":
-                lstviewTrains.ItemsSource = GetTrainsRunningOnDate() ?? trains;
+                lstviewTrains.ItemsSource = GetTrainsRunningOnDate() ?? dataFacade.GetAllTrains().ToObservableCollection();
                 break;
                 default:
                 throw new Exception("Unknown filter");
@@ -158,46 +133,39 @@ namespace RailwaySystem
         /// </summary>
         private ObservableCollection<Train> GetTrainsRunningBetweenStations()
         {
-            var departureStationName = (Station)ddDeparture.SelectedValue;
-            var DestinationStationName = (Station)ddDestination.SelectedValue;
+            var departureStationName = ddDeparture.SelectedValue.ToString();
+            var destinationStationName = ddDestination.SelectedValue.ToString();
 
-            if (departureStationName == DestinationStationName)
+            if (departureStationName == destinationStationName)
             {
                 MessageBox.Show("Departure and Destination stations cannot be the same!");
                 return null;
             }
 
-            //todo  see if u can't get the value as a station object
+            var departureStation = ValidStations.Stations.First(station => station.Name == departureStationName);
 
-            var departureStation = departureStationName;
-
-            var DestinationStation = DestinationStationName;
-
-            //            var departureStation = ValidStations.Stations.First(station => station.Name == departureStationName);
-            //
-            //            var DestinationStation = ValidStations.Stations.First(station => station.Name == DestinationStationName);
+            var destinationStation = ValidStations.Stations.First(station => station.Name == destinationStationName);
 
             var londonBound =
                 ValidStations.Stations.IndexOf(
                     departureStation) <
-                ValidStations.Stations.IndexOf(DestinationStation); //finds out if the desired train is London-bound or not; list of valid train stations is ordered from Edinburgh to London
-            //todo it seems to think this is always true, INVESTIGATE!!!!!
+                ValidStations.Stations.IndexOf(destinationStation); //finds out if the desired train is London-bound or not; list of valid train stations is ordered from Edinburgh to London
 
             ObservableCollection<Train> trainsBetweenStations;
 
             if (londonBound)
             {
-                trainsBetweenStations = trains.Where(train =>
-                     train.DestinationStation == ValidStations.Stations.Last() == londonBound &&
-                     (departureStation == train.OriginStation || train.IntermediateStations.Any()) &&
-                     (DestinationStation == train.DestinationStation || train.IntermediateStations.Any())).ToObservableCollection(); //gets trains going to London, and stopping at the stations desired
+                trainsBetweenStations = dataFacade.GetAllTrains().ToObservableCollection().Where(train =>
+                     train.DestinationStation.Name == ValidStations.Stations.Last().Name &&
+                     (departureStation.Name == train.OriginStation.Name || train.IntermediateStations.Select(station => station.Name).Any()) &&
+                     (destinationStation.Name == train.DestinationStation.Name || train.IntermediateStations.Select(station => station.Name).Any())).ToObservableCollection(); //gets trains going to London, and stopping at the stations desired
             }
             else
             {
-                trainsBetweenStations = trains.Where(train =>
-                    train.DestinationStation == ValidStations.Stations.Last() != londonBound &&
-                     (departureStation == train.OriginStation || train.IntermediateStations.Any()) &&
-                     (DestinationStation == train.DestinationStation || train.IntermediateStations.Any())).ToObservableCollection(); //gets trains going to Edinburgh, and stopping at the stations desired
+                trainsBetweenStations = dataFacade.GetAllTrains().ToObservableCollection().Where(train =>
+                    train.DestinationStation.Name == ValidStations.Stations.First().Name &&
+                     (departureStation.Name == train.OriginStation.Name || train.IntermediateStations.Select(station => station.Name).Any()) &&
+                     (destinationStation.Name == train.DestinationStation.Name || train.IntermediateStations.Select(station => station.Name).Any())).ToObservableCollection(); //gets trains going to Edinburgh, and stopping at the stations desired
             }
 
             if (!trainsBetweenStations.Any())
@@ -217,7 +185,7 @@ namespace RailwaySystem
         {
             var dateSelected = dateDeparture.SelectedDate ?? DateTime.Today;
 
-            var trainsOnDate = trains.Where(train => train.DepartureDateTime.Date == dateSelected).ToObservableCollection();
+            var trainsOnDate = dataFacade.GetAllTrains().ToObservableCollection().Where(train => train.DepartureDateTime.Date == dateSelected).ToObservableCollection();
 
             if (!trainsOnDate.Any())
             {
@@ -230,9 +198,8 @@ namespace RailwaySystem
 
         private void SetTrainListToDefault()
         {
-            lstviewTrains.ItemsSource = trains;
+            lstviewTrains.ItemsSource = dataFacade.GetAllTrains().ToObservableCollection();
             lstviewTrains.UpdateLayout();
         }
-
     }
 }

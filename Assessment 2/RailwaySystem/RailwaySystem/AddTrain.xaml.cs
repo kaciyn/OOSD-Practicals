@@ -1,4 +1,5 @@
-﻿using Logic;
+﻿using Data;
+using Logic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,9 @@ namespace RailwaySystem
         private UIElementCollection allWindowElements;
         private List<CheckBox> intermediateStationCheckboxes;
         private List<Station> intermediateStations;
+
+        readonly DataFacade.DataFacadeSingleton dataFacade = DataFacade.DataFacadeSingleton.GetInstance();
+
         public AddTrain()
         {
             InitializeComponent();
@@ -25,14 +29,14 @@ namespace RailwaySystem
 
             intermediateStationCheckboxes = allWindowElements.OfType<CheckBox>().Where(checkBox => (string)checkBox.Tag == "IntermediateStations").ToList(); //selects Intermediate Station checkboxes
 
-             intermediateStations =
-                ValidStations.Stations.Where(station => station.Type == Station.StationType.Intermediate).ToList();
+            intermediateStations =
+               ValidStations.Stations.Where(station => station.Type == Station.StationType.Intermediate).ToList();
 
             try
             {
                 for (int i = 0; i < ValidStations.Stations.Count(station => station.Type == Station.StationType.Intermediate); i++)
                 {
-                    intermediateStationCheckboxes[i].Content = intermediateStations[i];
+                    intermediateStationCheckboxes[i].Content = intermediateStations[i].Name;
                 }//sets checkbox labels to intermediate stations
             }
             catch (Exception) when (intermediateStations.Count != intermediateStationCheckboxes.Count)
@@ -42,8 +46,8 @@ namespace RailwaySystem
             }
 
             ddType.ItemsSource = Enum.GetNames(typeof(Train.TrainType));
-            ddOriginStation.ItemsSource = ValidStations.Stations.Where(station => station.Type == Station.StationType.Endpoint);
-            ddDestinationStation.ItemsSource = ValidStations.Stations.Where(station => station.Type == Station.StationType.Endpoint);
+            ddOriginStation.ItemsSource = ValidStations.Stations.Where(station => station.Type == Station.StationType.Endpoint).Select(station => station.Name).ToList(); ;
+            ddDestinationStation.ItemsSource = ValidStations.Stations.Where(station => station.Type == Station.StationType.Endpoint).Select(station => station.Name).ToList(); ;
         }
 
         /// <summary>Selects first element of combobox on load</summary>
@@ -128,33 +132,32 @@ namespace RailwaySystem
         {
             try
             {
-                //                Logic.trainf
+                var trainFactory = new TrainFactory();
+                var newTrain = trainFactory.CreateTrain(GetNewTrainInfo());
+                dataFacade.AddTrain(newTrain);
+                dataFacade.SaveTrains();
+                MessageBox.Show($"Train {newTrain.ID} added!");
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
-                throw;
             }
         }
 
-        private TrainInfoStub GetNewTrainInfo()
+        private TrainInfoHolder GetNewTrainInfo()
         {
-            if (datetimepickerDepartureTime != null)
+            var type = (Train.TrainType)Enum.Parse(typeof(Train.TrainType), ddType.SelectedValue.ToString());
+
+            var newTrainInfoStub = new TrainInfoHolder
             {
-                //todo null check for time or a try catch?
-                var newTrainInfoStub = new Logic.TrainInfoStub
-                {
-                    //todo see if enuming is worth the trouble here
-                    Type = (Train.TrainType)ddType.SelectedValue,
-                    DepartureTime = datetimepickerDepartureTime.Value??DateTime.Today,
-                    OriginStation = (Station)ddOriginStation.SelectedValue,
-                    DestinationStation = (Station)ddDestinationStation.SelectedValue,
-                    IntermediateStations = GetSelectedIntermediateStations(),
-                    OffersFirstClass = cbFirstClass.IsChecked ?? false
-                };
-                return newTrainInfoStub;
-            }
-            return null;
+                Type = type,
+                DepartureDateTime = datetimepickerDepartureTime.Value ?? DateTime.Today,
+                OriginStation = ValidStations.Stations.First(station => station.Name == ddOriginStation.SelectedValue.ToString()),
+                DestinationStation = ValidStations.Stations.First(station => station.Name == ddDestinationStation.SelectedValue.ToString()),
+                IntermediateStations = GetSelectedIntermediateStations(),
+                OffersFirstClass = cbFirstClass.IsChecked ?? false
+            };
+            return newTrainInfoStub;
         }
 
         private List<Station> GetSelectedIntermediateStations()
@@ -169,6 +172,11 @@ namespace RailwaySystem
             }
 
             return selectedIntermediateStations;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

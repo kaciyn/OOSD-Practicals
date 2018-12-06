@@ -1,27 +1,30 @@
 ﻿using System;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
+using System.Xml.Serialization;
 
 namespace Logic
 {
     /// <summary>
     /// A booking on a train
     /// </summary>
-    [Serializable]
+    [XmlInclude(typeof(Station))]
+    [DataContract(Namespace = ""), KnownType(typeof(Booking))]
     public class Booking
     {
         private string _name;
-        //todo validate duplicate bookings
         /// <summary>
         /// Passenger name
         /// </summary>
         /// <exception cref="System.ArgumentException">Name cannot be blank</exception>
+        [DataMember]
         public string Name
         {
             get => _name;
             set
             {
-                if (string.IsNullOrWhiteSpace(_name))
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Name cannot be blank");
                 }
@@ -29,7 +32,7 @@ namespace Logic
             }
         }
 
-        //todo may need to sort out whether the train is going in the correct direction lol and also stopping at the station yeah actually absolutely
+        [DataMember]
         private Station _departureStation;
         /// <summary>
         /// The departure station, must be in list of valid stations and cannot be same as destination station
@@ -42,12 +45,13 @@ namespace Logic
         /// or
         /// Departure station cannot be same as destination station!
         /// </exception>
+        [DataMember]
         public Station DepartureStation
         {
             get => _departureStation;
             set
             {
-                if (ValidStations.Stations.All(station => station != value))
+                if (ValidStations.Stations.All(station => station.Name != value.Name))
                 {
                     throw new ArgumentException("Invalid departure station");
                 }
@@ -72,12 +76,13 @@ namespace Logic
         /// or
         /// Destination station cannot be same as departure station!
         /// </exception>
+        [DataMember]
         public Station DestinationStation
         {
             get => _destinationStation;
             set
             {
-                if (ValidStations.Stations.All(station => station != value))
+                if (ValidStations.Stations.All(station => station.Name != value.Name))
                 {
                     throw new ArgumentException("Invalid destination station");
                 }
@@ -96,6 +101,7 @@ namespace Logic
         /// <value>
         ///   <c>true</c> if [first class]; otherwise, <c>false</c>.
         /// </value>
+        [DataMember]
         public bool FirstClass
         {
             get { return _firstClass; }
@@ -103,7 +109,6 @@ namespace Logic
             {
                 if (FirstClass)
                 {
-                    //todo this should be validated against train offering first class
                 }
                 if (value == true)
                 {
@@ -113,14 +118,14 @@ namespace Logic
             }
         }
 
-        //todo if this is true i think the seat needs to be null and cabin stands in for the seat, idk if to treat the cabin as a single seat???
         private bool _cabin;
         /// <summary>
-        /// Indicates if the passenger has booked a cabin, can only true if the train is a sleeper
+        /// Indicates if the passenger has booked a cabin, can only true if the train is a sleeper; assuming one cabin per coach
         /// </summary>
         /// <value>
         ///   <c>true</c> if cabin; otherwise, <c>false</c>.
         /// </value>
+        [DataMember]
         public bool Cabin
         {
             get { return _cabin; }
@@ -134,6 +139,7 @@ namespace Logic
         /// <value>
         /// The coach.
         /// </value>
+        [DataMember]
         public string Coach
         {
             get => _coach;
@@ -150,69 +156,39 @@ namespace Logic
 
         private int _seat;
         /// <summary>
-        /// The passenger's seat number
+        /// The passenger's seat number, 0 if passenger has booked a cabin
         /// </summary>
         /// <value>
         /// The seat.
         /// </value>
         /// <exception cref="System.ArgumentException">Seat number needs to be from 1-60</exception>
+        [DataMember]
         public int Seat
         {
             get => _seat;
             set
             {
-                if (value<1||value>60)
+                if (Cabin)
+                {
+                    value = 0;
+                }
+                else if (value < 1 || value > 60)
+
                 {
                     throw new ArgumentException("Seat number needs to be from 1-60");
+
                 }
                 _seat = value;
             }
         }
 
-             /// <summary>
+        /// <summary>
         /// The id of the train the the booking is for
         /// </summary>
         /// <value>
         /// The train identifier.
         /// </value>
+        [DataMember]
         public string TrainID { get; set; }
-
-
-        public Train GetTrain(string trainID)
-        {
-            return new ExpressTrain();
-        }
-        //        public int CalculateFare(Booking booking)
-        //        {
-        //            int fare;
-        //            if (ValidStations.Stations.Where(station => station.Type == Station.StationType.Endpoint).Contains(DestinationStation) && ValidStations.Stations.Where(station => station.Type == Station.StationType.Endpoint).Contains(DepartureStation))
-        //            {
-        //                fare = 50;
-        //            }
-        //            else
-        //            {
-        //                fare = 25;
-        //            }
-        //
-        //            if (booking.FirstClass)
-        //            {
-        //                fare = fare + 10;
-        //            }
-        //
-        //            if (booking.GetTrain().Type == Train.TrainType.Sleeper)
-        //            {
-        //                fare = fare + 10;
-        //            }
-        //
-        //            if (booking.Cabin)
-        //            {
-        //                //todo define some amount of cabins the train has say 2 per coach because like does it really matter
-        //                //todo the decorator might be good for cabin bookings as it doesn't have the classical seat thing
-        //
-        //            }
-        //
-        //            return fare;
-        //        }
     }
-
 }

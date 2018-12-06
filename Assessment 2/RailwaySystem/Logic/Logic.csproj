@@ -46,19 +46,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Booking.cs" />
-    <Compile Include="Bookings.cs" />
     <Compile Include="ExpressTrain.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="FirstClassDecorator.cs" />
+    <Compile Include="Fare.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Station.cs" />
     <Compile Include="StoppingTrain.cs" />
-    <Compile Include="TrainInfoStub.cs" />
+    <Compile Include="TrainInfoHolder.cs" />
     <Compile Include="SleeperTrain.cs" />
     <Compile Include="Train.cs" />
     <Compile Include="TrainFactory.cs" />
-    <Compile Include="Trains.cs" />
     <Compile Include="ValidStations.cs" />
   </ItemGroup>
   <ItemGroup>

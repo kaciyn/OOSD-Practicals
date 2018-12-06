@@ -47,13 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookingDatabase.cs" />
+    <Compile Include="BookingDb.cs" />
     <Compile Include="DataFacade.cs" />
     <Compile Include="Serialisers.cs" />
-    <Compile Include="ItemSaver.cs" />
-    <Compile Include="PersistentDick.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Trains.cs" />
+    <Compile Include="TrainDb.cs" />
     <Compile Include="XmlSerialiser.cs" />
   </ItemGroup>
   <ItemGroup>
